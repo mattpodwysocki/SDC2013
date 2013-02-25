@@ -1,0 +1,6 @@
+build
+node_modules
+npm-debug.log
+
+/* data - fetch it yourself */
+npm.json
