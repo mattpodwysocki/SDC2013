@@ -15,7 +15,8 @@
     "mkdirp": "~0.3.4",
     "scuttlebutt": "~5.5.15",
     "scuttlebutt": "~5.5.15",
-    "window-stream": "~0.2.3"
+    "window-stream": "~0.2.3",
+    "rx": "~2.0.0"
   },
   "devDependencies": {},
   "author": "Matthew Podwysocki",
