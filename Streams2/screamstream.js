@@ -3,6 +3,8 @@ var fs = require('fs'),
     Transform = require('stream').Transform,
     inherits = require('util').inherits;
 
+inherits(ScreamStream, Transform);
+
 // Create Scream Stream
 function ScreamStream () {
     Transform.call(this, {
@@ -10,8 +12,6 @@ function ScreamStream () {
     encoding: 'utf8'
     });
 }
-
-inherits(ScreamStream, Transform);
 
 // Transform the existing data
 ScreamStream.prototype._transform = function (chunk, outputFn, callback) {

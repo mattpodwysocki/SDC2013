@@ -16,7 +16,8 @@
     "scuttlebutt": "~5.5.15",
     "scuttlebutt": "~5.5.15",
     "window-stream": "~0.2.3",
-    "rx": "~2.0.0"
+    "rx": "~2.0.0",
+    "optimist": "~0.3.5"
   },
   "devDependencies": {},
   "author": "Matthew Podwysocki",

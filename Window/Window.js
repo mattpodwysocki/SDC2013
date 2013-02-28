@@ -1,22 +1,23 @@
 var fs = require('fs'),
 	JSONStream = require('JSONStream'),
+	through = require('through'),
 	windowStream = require('window-stream');
-
-var ev = new windowStream.EventWindow({ size: 10});
 
 var ma = new windowStream.MovingAverage({
 	average: 'simple',
-	window: ev
+	window: new windowStream.EventWindow({ size: 10})
 });
 
 fs.createReadStream('../npm.json')
-    .pipe(JSONStream.parse(['rows', true, 'doc', 'description']))
+    .pipe(JSONStream.parse(['rows', true, 'doc']))
+    .pipe(through(function (doc) {
+    	var versions = doc.versions || {};
+    	var versionLength = Object.keys(versions).length;
+    	console.log(versionLength);
+    	this.emit('data', versionLength);
+    }))
     .pipe(ma);
 
 ma.on('data', function (data) {
-	console.log(Object(data));
+	console.log(data);
 });
-
-
-
-

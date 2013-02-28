@@ -68,18 +68,19 @@ var processOutObservable = throughStream.toObservable().publish().refCount();
 processOutObservable
     .bufferWithCount(10, 10)
     .scan(0, function (acc, item) {
-        var count = count = item.length, sum = 0;
-        for (var i = 0; i < count; i++) {
-            sum += item[i].length;
-        }
 
-        return sum / count;
+        var sum = item.reduce(function (acc, doc) {
+            var versions = doc.versions || {};
+            return acc + Object.keys(versions).length;
+        }, 0);
+
+        return sum / item.length;
     })
     .subscribe(function (data) {
-        console.log('Average dependencies: ' + data);
+        console.log('Average # of versions: ' + data);
     });
 
 fs.createReadStream('../npm.json')
-  .pipe(JSONStream.parse(['rows', true, 'doc', 'dependencies']))
+  .pipe(JSONStream.parse(['rows', true, 'doc']))
   .pipe(throughStream);
   //.pipe(process.stdout);
