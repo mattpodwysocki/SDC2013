@@ -19,7 +19,8 @@ Below are some examples of streams in action.  These demonstrate the Streams1 in
 
 **Streams in Action**
 
-- beam\-js
+- [beam\-js Simple](https://github.com/mattpodwysocki/SDC2013/blob/master/Beam-JS/simple-usage.js)
+- [dnode Yeller](https://github.com/mattpodwysocki/SDC2013/blob/master/dnode/dnode1.js)
 - [Scuttlebutt Chat Server](https://github.com/mattpodwysocki/SDC2013/blob/master/Scuttlebutt/chatserver.js)
 
 **Streams2**
