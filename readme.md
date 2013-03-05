@@ -21,6 +21,8 @@ Below are some examples of streams in action.  These demonstrate the Streams1 in
 
 - [beam\-js Simple](https://github.com/mattpodwysocki/SDC2013/blob/master/Beam-JS/simple-usage.js)
 - [dnode Yeller](https://github.com/mattpodwysocki/SDC2013/blob/master/dnode/dnode1.js)
+- [Browserify and Shoe](https://github.com/mattpodwysocki/SDC2013/tree/master/shoe)
+- [Browserify, dnode and shoe yeller](https://github.com/mattpodwysocki/SDC2013/tree/master/shoe-dnode)
 - [Scuttlebutt Chat Server](https://github.com/mattpodwysocki/SDC2013/blob/master/Scuttlebutt/chatserver.js)
 
 **Streams2**
