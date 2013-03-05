@@ -2,7 +2,7 @@ var Stream = require('stream');
 
 // Every second, yield a value
 function createStream () {
-    var s = new Stream;
+    var s = new Stream();
     s.readable = true
 
     var times = 5;

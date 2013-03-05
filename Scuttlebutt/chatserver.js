@@ -2,11 +2,11 @@ var net = require('net'),
     opts = require('optimist').argv,
     split = require('split');
 
-var Model = require('scuttlebutt/model')
-var chat  = new Model()
+var Model = require('scuttlebutt/model');
+var chat  = new Model();
 
 // Get name from the command line arguments
-var name = opts.name
+var name = opts.name;
 
 if(opts.server) {
     // I'm the server, so create the stream and pipe the data
@@ -17,7 +17,7 @@ if(opts.server) {
 
     function connect () {
 
-    var stream = net.connect(8989, 'localhost');
+        var stream = net.connect(8989, 'localhost');
 
         // Connect to our model with our remote pipe
         stream.pipe(chat.createStream()).pipe(stream)
