@@ -14,7 +14,7 @@ ws.write = function (buf) {
 // Handle data at the end if we get any, then write total bytes
 ws.end = function (buf) {
     if (arguments.length) this.write(buf);
-    console.log('Number of bytes: ' + this.bytes);
+    console.log('Number of bytes: ' + this.bytes.toLocaleString());
 };
 
 // Not necessary but good for cleanup

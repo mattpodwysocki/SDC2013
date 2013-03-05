@@ -3,10 +3,10 @@ var fs = require('fs'),
     Stream = require('stream'),
     inherits = require('util').inherits;
 
-inherits(ScreamStream, Stream)
+inherits(ScreamStream, Stream);
 
 function ScreamStream () {
-  this.writable = this.readable = true
+  this.writable = this.readable = true;
 }
 
 ScreamStream.prototype.write = function (data) {

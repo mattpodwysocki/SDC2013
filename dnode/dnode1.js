@@ -15,7 +15,7 @@ server.on('listening', function () {
     var stream = net.connect(8000);
     var d = dnode();
     d.on('remote', function (remote) {
-        remote.yell('hello SDC 2013', function (s) {
+        remote.yell('hello sdc 2013', function (s) {
             console.log(s);
         });
     });
